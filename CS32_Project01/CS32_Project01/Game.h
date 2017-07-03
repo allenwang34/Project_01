@@ -2,6 +2,8 @@
 #define GAME_H
 
 #include"globals.h"
+#include "Arena.h"
+#include"Player.h"
 
 
 class Arena;
