@@ -2,12 +2,11 @@
 #define GAME_H
 
 #include"globals.h"
-#include "Arena.h"
-#include"Player.h"
+
 
 
 class Arena;
-class Player;
+//class Player;
 
 class Game
 {

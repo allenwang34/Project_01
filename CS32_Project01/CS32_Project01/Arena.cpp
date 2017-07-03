@@ -2,7 +2,10 @@
 //  Arena implementations
 ///////////////////////////////////////////////////////////////////////////
 
-#include"Arena.h"
+#include "Arena.h"
+#include "Player.h"
+#include "Robot.h"
+
 
 
 
@@ -141,6 +144,7 @@ bool Arena::addPlayer(int r, int c)
 
 	// Dynamically allocate a new Player and add it to the arena
 	m_player = new Player(this, r, c);
+ 
 	return true;
 }
 

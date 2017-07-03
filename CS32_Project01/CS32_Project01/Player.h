@@ -2,11 +2,10 @@
 #define PLAYER_H
 
 #include "globals.h"
-#include "Arena.h"
+
 
 
 class Arena;
-
 class Player
 {
 public:

@@ -1,9 +1,7 @@
 #ifndef ROBOT_H
 #define ROBOT_H
-
-
 #include "globals.h"
-#include "Arena.h"
+
 
 
 class Arena;  // This is needed to let the compiler know that Arena is a

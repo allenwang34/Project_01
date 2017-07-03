@@ -1,8 +1,8 @@
 #ifndef ARENA_H
 #define ARENA_H
 #include "globals.h"
-#include "Robot.h"
-#include "Player.h"
+
+
 
 class Player;
 class Robot;
