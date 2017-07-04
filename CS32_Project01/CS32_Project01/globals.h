@@ -1,12 +1,6 @@
 #ifndef  GLOBALS_H
 #define  GLOBALS_H
 
-#include <iostream>
-#include <string>
-#include <cstdlib>
-#include <ctime>
-
-
 
 ///////////////////////////////////////////////////////////////////////////
 // Manifest constants

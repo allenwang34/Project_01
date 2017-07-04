@@ -8,6 +8,7 @@
 #include "globals.h"
 #ifdef _MSC_VER  //  Microsoft Visual C++
 #include <windows.h>
+#include <iosfwd>
 
 void clearScreen()
 {

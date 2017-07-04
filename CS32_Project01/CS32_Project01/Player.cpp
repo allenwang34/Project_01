@@ -1,5 +1,9 @@
 #include "Player.h"
 #include "Arena.h"
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <ctime>
 
 ///////////////////////////////////////////////////////////////////////////
 //  Player implementations

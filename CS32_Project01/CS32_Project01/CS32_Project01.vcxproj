@@ -30,6 +30,7 @@
     <ClInclude Include="Arena.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="globals.h" />
+    <ClInclude Include="History.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Robot.h" />
   </ItemGroup>

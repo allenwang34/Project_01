@@ -1,4 +1,6 @@
 
+#include <ctime>
+#include <cstdlib>
 #include "globals.h"
 #include "Robot.h" 
 #include "Arena.h"

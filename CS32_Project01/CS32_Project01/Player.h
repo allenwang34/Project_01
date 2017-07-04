@@ -2,7 +2,7 @@
 #define PLAYER_H
 
 #include "globals.h"
-
+#include <string>
 
 
 class Arena;

@@ -1,6 +1,10 @@
 #include "Game.h"
 #include "Arena.h"
 #include"Player.h"
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <string>
 
 ///////////////////////////////////////////////////////////////////////////
 //  Game implementations

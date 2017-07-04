@@ -1,5 +1,6 @@
 #ifndef ARENA_H
 #define ARENA_H
+#include <string>
 #include "globals.h"
 
 

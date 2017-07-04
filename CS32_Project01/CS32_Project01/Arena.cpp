@@ -5,6 +5,9 @@
 #include "Arena.h"
 #include "Player.h"
 #include "Robot.h"
+#include <string>
+#include <iostream>
+
 
 
 
