@@ -1,6 +1,7 @@
 #include "Game.h"
 #include "Arena.h"
 #include"Player.h"
+#include"globals.h"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
