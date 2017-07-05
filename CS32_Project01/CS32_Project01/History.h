@@ -1,7 +1,6 @@
 #ifndef HISTORY_H
 #define HISTORY_H
 
-class Arena;
 
 class History {
 
@@ -15,8 +14,9 @@ public:
 
 
 private:
-	Arena *m_arena;
-
+	int  m_rows;
+	int m_cols;
+	char records[MAXROWS][MAXCOLS];
 
 };
 

@@ -14,6 +14,7 @@
 
 
 Arena::Arena(int nRows, int nCols)
+	:m_history(nRows,nCols)
 {
 	if (nRows <= 0 || nCols <= 0 || nRows > MAXROWS || nCols > MAXCOLS)
 	{
@@ -97,7 +98,10 @@ void Arena::display(std::string msg) const
 	{
 		// Set the char to '@', unless there's also a robot there,
 		// in which case set it to '*'.
+		m_history.record(m_player->row() - 1, m_player->col() - 1);
+
 		char& gridChar = grid[m_player->row() - 1][m_player->col() - 1];
+		
 		if (gridChar == '.')
 			gridChar = '@';
 		else
@@ -180,4 +184,8 @@ bool Arena::moveRobots()
 
 	// return true if the player is still alive, false otherwise
 	return !m_player->isDead();
+}
+
+History& Arena::history() {
+	return m_history;
 }

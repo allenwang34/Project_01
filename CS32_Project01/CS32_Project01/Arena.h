@@ -2,9 +2,7 @@
 #define ARENA_H
 #include <string>
 #include "globals.h"
-
-
-
+#include "History.h"
 
 class Player;
 class Robot;
@@ -23,6 +21,7 @@ public:
 	int     robotCount() const;
 	int     nRobotsAt(int r, int c) const;
 	void    display(std::string msg) const;
+	History& history();
 
 	// Mutators
 	bool   addRobot(int r, int c);
@@ -36,6 +35,7 @@ private:
 	Player* m_player;
 	Robot*  m_robots[MAXROBOTS];
 	int     m_nRobots;
+	History m_history;
 };
 
 
