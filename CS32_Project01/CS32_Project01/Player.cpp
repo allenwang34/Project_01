@@ -107,7 +107,7 @@ std::string Player::takeComputerChosenTurn()
 	// robot.  Search the four directions at increasing distances for
 	// a robot.
 	bool shot = false;
-	bool shotSuccess;
+	bool shotSuccess = false;
 	for (int k = 1; k < m_arena->rows() || k < m_arena->cols(); k++)
 	{
 		if (m_row - k >= 1 && m_arena->nRobotsAt(m_row - k, m_col) > 0)

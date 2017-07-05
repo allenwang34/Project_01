@@ -10,6 +10,7 @@
 #include <windows.h>
 #include <iosfwd>
 
+
 void clearScreen()
 {
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -26,6 +27,7 @@ void clearScreen()
 #else  // not Microsoft Visual C++, so assume UNIX interface
 
 #include <cstring>
+#include <iostream>
 
 void clearScreen()  // will just write a newline in an Xcode output window
 {
