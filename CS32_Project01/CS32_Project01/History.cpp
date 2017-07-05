@@ -20,8 +20,12 @@ bool History::record(int r, int c) {
 
 	if (records[r][c] == '.') {
 		records[r][c] = 'A';
-	} else {
-		records[r][c] = 'B';
+	}
+	else if (records[r][c]=='Z') {
+
+	}
+	else {
+		records[r][c] ++;
 	}
 	return true;
 
@@ -30,13 +34,16 @@ bool History::record(int r, int c) {
 
 void History::display() const {
 
+	clearScreen();
+	for (int r = 0; r < m_rows; r++)
+	{
+		for (int c = 0; c < m_cols; c++)
+			std::cout << records[r][c];
+		std::cout << std::endl;
+	}
+	std::cout << std::endl;
+
 
 }
 
-
-
-History::~History() {
-
-
-}
 

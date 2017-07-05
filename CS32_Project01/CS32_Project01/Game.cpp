@@ -60,7 +60,7 @@ void Game::play()
 		m_arena->display(msg);
 		msg = "";
 		std::cout << std::endl;
-		std::cout << "Move (u/d/l/r/su/sd/sl/sr/c/q): ";
+		std::cout << "Move (u/d/l/r/su/sd/sl/sr/c/h/q): ";
 		std::string action;
 		std::getline(std::cin, action);
 		if (action.size() == 0)
@@ -105,8 +105,14 @@ void Game::play()
 					break;
 				}
 				break;
+			case 'h':
+				m_arena->history().display();
+				std::cout << "Press enter to continue.";
+				std::cin.ignore(10000, '\n');
+				break;
 			}
 		}
+		m_arena->history().record(p->row() - 1, p->col() - 1);
 		m_arena->moveRobots();
 	} while (!m_arena->player()->isDead() && m_arena->robotCount() > 0);
 	m_arena->display(msg);
