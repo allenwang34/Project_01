@@ -19,7 +19,12 @@ History::History(int nRows, int nCols) {
 }
 
 History::~History() {
-	delete records;
+    
+    for (int r = 0; r < m_rows; r++) {
+        delete[] records[r];
+    }
+	
+    
 }
 
 

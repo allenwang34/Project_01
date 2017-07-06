@@ -6,7 +6,6 @@
 
 class Player;
 class Robot;
-class History;
 
 class Arena
 {
