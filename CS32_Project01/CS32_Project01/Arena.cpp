@@ -33,6 +33,7 @@ Arena::~Arena()
 	for (int k = 0; k < m_nRobots; k++)
 		delete m_robots[k];
 	delete m_player;
+	
 }
 
 int Arena::rows() const

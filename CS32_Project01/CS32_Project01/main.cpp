@@ -13,6 +13,7 @@ using namespace std;
 //  main()
 ///////////////////////////////////////////////////////////////////////////
 
+
 int main()
 {
 	// Initialize the random number generator.  (You don't need to
@@ -26,4 +27,3 @@ int main()
 	// Play the game
 	g.play();
 }
-

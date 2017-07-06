@@ -48,6 +48,7 @@ Game::~Game()
 
 void Game::play()
 {
+	
 	Player* p = m_arena->player();
 	if (p == nullptr)
 	{
@@ -57,6 +58,7 @@ void Game::play()
 	std::string msg = "";
 	do
 	{
+		bool playerTurn = true;
 		m_arena->display(msg);
 		msg = "";
 		std::cout << std::endl;
@@ -106,14 +108,18 @@ void Game::play()
 				}
 				break;
 			case 'h':
+				playerTurn = false;
 				m_arena->history().display();
 				std::cout << "Press enter to continue.";
 				std::cin.ignore(10000, '\n');
 				break;
 			}
 		}
-		m_arena->history().record(p->row() - 1, p->col() - 1);
-		m_arena->moveRobots();
+
+		if (playerTurn == true) {
+			m_arena->moveRobots();
+		}
+		
 	} while (!m_arena->player()->isDead() && m_arena->robotCount() > 0);
 	m_arena->display(msg);
 }

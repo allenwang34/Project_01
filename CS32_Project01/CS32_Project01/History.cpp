@@ -7,10 +7,21 @@
 History::History(int nRows, int nCols) {
 	m_rows = nRows;
 	m_cols = nCols;
+
+	records = new char*[nRows];
+	for (int r = 0; r < nRows; r++) {
+		records[r] = new char[nCols];
+	}
+
 	for (int i = 0; i < m_rows; i++)
 		for (int j = 0; j < m_cols; j++)
 			records[i][j] = '.';
 }
+
+History::~History() {
+	delete records;
+}
+
 
 
 bool History::record(int r, int c) {

@@ -101,6 +101,8 @@ std::string Player::takeComputerChosenTurn()
 			move(bestMoveDir);
 			return "Moved.";
 		}
+
+		m_arena->history().record(m_row-1, m_col-1); 
 	}
 
 	// If we're not going to move, we may as well shoot at the nearest
@@ -151,6 +153,7 @@ std::string Player::takeComputerChosenTurn()
 void Player::stand()
 {
 	m_age++;
+	m_arena->history().record(m_row-1, m_col-1);
 }
 
 void Player::move(int dir)
@@ -163,6 +166,7 @@ void Player::move(int dir)
 	case LEFT:   if (m_col > 1)               m_col--; break;
 	case RIGHT:  if (m_col < m_arena->cols()) m_col++; break;
 	}
+	m_arena->history().record(m_row-1, m_col-1);
 }
 
 bool Player::shoot(int dir)
