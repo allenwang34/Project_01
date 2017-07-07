@@ -101,8 +101,7 @@ std::string Player::takeComputerChosenTurn()
 			move(bestMoveDir);
 			return "Moved.";
 		}
-
-		m_arena->history().record(m_row-1, m_col-1); 
+		m_arena->history().record(m_row - 1, m_col - 1);
 	}
 
 	// If we're not going to move, we may as well shoot at the nearest
@@ -147,6 +146,7 @@ std::string Player::takeComputerChosenTurn()
 
 	// No robots to shoot.  Just stand, then.
 	stand();
+	m_arena->history().record(m_row - 1, m_col - 1);
 	return "Stood.";
 }
 
