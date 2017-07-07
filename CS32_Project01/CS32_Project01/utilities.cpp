@@ -37,7 +37,7 @@ void clearScreen()  // will just write a newline in an Xcode output window
 	else
 	{
 		static const char* ESC_SEQ = "\x1B[";  // ANSI Terminal esc seq:  ESC [
-        std::cout << ESC_SEQ << "2J" << ESC_SEQ << "H" << fflush;
+        std::cout << ESC_SEQ << "2J" << ESC_SEQ << "H" << std::flush;
 	}
 }
 
