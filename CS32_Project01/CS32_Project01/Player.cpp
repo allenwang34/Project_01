@@ -172,6 +172,7 @@ void Player::move(int dir)
 bool Player::shoot(int dir)
 {
 	m_age++;
+	m_arena->history().record(m_row - 1, m_col - 1);
 
 	if (rand() % 3 == 0)  // miss with 1/3 probability
 		return false;
